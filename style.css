@@ -1,0 +1,127 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    color: #222;
+}
+
+/* Hero */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px 50px;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 120px;
+}
+
+.hero-text {
+    text-align: left;
+}
+
+.hero-content h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero-desc {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.hero-tags span {
+    display: inline-block;
+    background: #e6e6e6;
+    padding: 6px 12px;
+    margin: 4px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+/* 프로필 사진 */
+.profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 100px;
+    object-fit: cover;
+}
+
+/* Sections */
+.section-wrapper {
+    max-width: 900px;
+    margin: 0 auto 40px;
+    padding: 0 20px;
+}
+
+/* Cards */
+.card {
+    background: #f2f2f2;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.card h2 {
+    color: #2a6df4;
+}
+
+/* Interests & Goals */
+.interests-goals {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.tags span {
+    display: inline-block;
+    background: #e6e6e6;
+    padding: 6px 12px;
+    margin: 4px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+/* Projects */
+.project-desc {
+    margin-bottom: 10px;
+}
+
+.project-year {
+    margin-top: 10px;
+}
+
+.project-year h3 {
+    color: #2a6df4;
+    margin-bottom: 6px;
+}
+
+.project-list {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.project-list li {
+    margin-bottom: 6px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px 0;
+    color: #666;
+    font-size: 14px;
+}
+
+footer a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
