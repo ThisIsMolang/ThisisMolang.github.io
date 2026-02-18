@@ -3,104 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Homepage</title>
+    <title>My Intro Page</title>
+    <link rel="icon" href="icon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Glory&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="tabbar-backdrop" id="tabbarBackdrop" aria-hidden="true"></div>
 
-    <!-- Hero -->
-    <section class="hero">
-        <div class="hero-content">
-
-            <!-- 프로필 사진 -->
-            <img src="profile.jpg" alt="profile" class="profile-img">
-
-            <!-- 텍스트 영역 -->
-            <div class="hero-text">
-                <h1>유하운</h1>
-
-                <p class="hero-desc">
-                    한국기술교육대학교 기계공학부 1학년
-                </p>
-
-                <div class="hero-tags">
-                    <span>System Design</span>
-                    <span>Optimization</span>
-                    <span>Engineering</span>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-
-    <!-- About -->
-    <section class="section-wrapper">
-        <div class="card">
-            <h2>About Me</h2>
-            <p>
-                안녕하세요, 한국기술교육대학교 26학번 유하운입니다.
-                저는 효율적인 설계와 시스템 최적화 과정에 흥미를 가지고 있으며, 
-                다양한 기계 구조와 공학 문제를 분석하고 개선하는 방법을 배울 예정입니다. 
-                앞으로 실제 문제를 해결할 수 있는 설계 능력과 범용적인 최적화 사고를 갖추는 것이 제 목표입니다.
-            </p>
-        </div>
-    </section>
-
-    <!-- Interests & Goals -->
-    <section class="section-wrapper">
-        <div class="interests-goals">
-
-            <div class="card interests">
-                <h2>Interests</h2>
-                <div class="tags">
-                    <span>#기계공학</span>
-                    <span>#기계설계</span>
-                    <span>#설계최적화</span>
-                    <span>#시스템설계</span>
-                    <span>#최적화기법</span>
-                    <span>#Engineering</span>
-                </div>
-            </div>
-
-            <div class="card goals">
-                <h2>University Goals</h2>
-                <ul>
-                    <li>전공 학업 성취도 꾸준히 유지하기</li>
-                    <li>좋은 친구 관계 만들기</li>
-                    <li>과제와 학업 일정 철저히 관리하기</li>
-                </ul>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Projects -->
-    <section class="section-wrapper">
-        <div class="card">
-            <h2>Projects</h2>
-            <p class="project-desc">
-                대학 생활 동안 진행하는 프로젝트를 이곳에 기록할 예정입니다.
-            </p>
-
-            <div class="project-year">
-                <h3>Year 1</h3>
-                <ul class="project-list">
-                    <li>Coming Soon...</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>
-            <a href="https://github.com/ThisIsMolang" target="_blank">
-                GitHub
-            </a>
-            / Contact
+<a class="logo-home-link" id="logoHomeLink" href="index.html" aria-label="메인 페이지로 이동">
+    <div class="logo-container" id="logoContainer">
+        <div class="orbital-layer" id="orbitalLayer" aria-hidden="true"></div>
+        <img src="images/H.png" class="letter" data-offset="-270" alt="H">
+        <img src="images/A.png" class="letter" data-offset="-90" alt="A">
+        <img src="images/U.png" class="letter" data-offset="90" alt="U">
+        <img src="images/N.png" class="letter" data-offset="270" alt="N">
+        <p class="logo-text" id="logoText" aria-label="Haun's Idea bank">
+            <span>Haun's</span>
+            <span>Idea bank</span>
         </p>
-    </footer>
+    </div>
+</a>
 
+<section class="intro-stage" aria-hidden="true"></section>
+
+<main class="main-content" id="mainContent">
+    <section class="hero-card">
+        <img src="images/profile.png" alt="profile" class="profile-img">
+        <div class="hero-text">
+            <h1>유하운</h1>
+            <p class="hero-desc">한국기술교육대학교 기계공학부 1학년</p>
+        </div>
+    </section>
+    <section class="content-block first-block">
+        <h1>About Me</h1>
+        <p>
+            안녕하세요, 한국기술교육대학교 26학번 유하운입니다. 
+        </p>
+        <p>
+            효율적인 설계와 시스템 최적화에 관심이 있습니다. 다양한 기계 구조를 분석하고 이를 개선하는 방법을 배우고 싶습니다. 
+            앞으로 실제 문제를 해결할 수 있는 설계 능력과 범용적인 기계공학 지식을 갖추는 것이 제 목표입니다.
+        </p>
+            <div class="icon-links" aria-label="Contact links">
+                <a class="icon-link" href="https://github.com/ThisIsMolang" target="_blank" rel="noreferrer" aria-label="GitHub">
+                    <img src="images/github.png" alt="GitHub">
+                </a>
+                <a class="icon-link" href="mailto:thisismollang@gmail.com" aria-label="Email">
+                    <img src="images/email.png" alt="Email">
+                </a>
+            </div>
+    </section>
+
+    <section class="content-block">
+        <h2>About This Space</h2>
+        <p>
+            이 공간은 저의 아이디어 뱅크이자 성장 기록장입니다. 
+            제가 관심 있는 주제에 대한 생각과 프로젝트 아이디어, 그리고 학습 기록을 공유하는 곳입니다. 
+            앞으로 이곳에 다양한 콘텐츠가 채워질 예정이니 많은 관심 부탁드립니다!
+        </p>
+    </section>
+
+    <div class="content-grid">
+        <section class="content-block">
+            <h2>Interests</h2>
+            <div class="interest-tags" aria-label="Interest tags">
+                <span>#SystemDesign</span>
+                <span>#Optimization</span>
+                <span>#Productivity</span>
+                <span>#Robotics</span>
+            </div>
+        </section>
+        
+        <section class="content-block">
+            <h2>Tech Stack</h2>
+            <div class="stack-tags" aria-label="Tech stack">
+                <span>Python 3</span>
+                <span>Git</span>
+                <span>More Coming Soon</span>
+            </div>
+        </section>
+    </div>
+
+    <section class="content-block">
+        <h2>Goals</h2>
+        <ul class="goal-list">
+            <li>학업적 성취</li>
+            <li>좋은 친구 만들기</li>
+            <li>일정과 시간 관리</li>
+        </ul>
+    </section>
+
+    <section class="content-block">
+        <h2>Bio</h2>
+        <ul class="bio-list">
+            <li>
+                <span class="bio-date">2026</span>
+                <span class="bio-content">한국기술교육대학교 기계공학부 입학</span>
+            </li>
+            <li>
+                <span class="bio-date">2025</span>
+                <span class="bio-content">설계/최적화 관심 분야 설정</span>
+            </li>
+        </ul>
+    </section>
+
+    <section class="content-block">
+        <h2>Currently Working On...</h2>
+        <ul class="project-list">
+            <li>
+                <strong>Python Basics</strong>
+                <span>겨울방학 동안 python 공부하기 (2026)</span>
+            </li>
+            <li>
+                <strong>Project Coming Soon</strong>
+                <span>1학년 1학기 (2026)</span>
+            </li>
+            <li>
+                <strong>Project Coming Soon</strong>
+                <span>여름방학? (2026)</span>
+            </li>
+        </ul>
+    </section>
+
+    
+</main>
+<script src="script.js" defer></script>
 </body>
 </html>
