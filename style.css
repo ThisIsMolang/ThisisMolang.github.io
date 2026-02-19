@@ -49,9 +49,9 @@ body.is-docked {
 }
 
 .logo-container {
-	--logo-size: clamp(88px, 15vw, 144px);
-	--brand-shift: clamp(56px, 8.6vw, 116px);
-	--text-offset: clamp(64px, 8.4vw, 176px);
+	--logo-size: clamp(80px, 14vw, 160px);
+	--brand-shift: clamp(56px, 8vw, 116px);
+	--text-offset: clamp(64px, 10vw, 120px);
 	position: fixed;
 	left: 50%;
 	top: 50%;
@@ -139,12 +139,6 @@ body.is-docked {
 	transform: translateX(-18px) scale(0.55);
 	transform-origin: left center;
 	transition: transform 0.55s cubic-bezier(0.2, 0.95, 0.2, 1.2), opacity 0.3s ease;
-}
-
-@media (min-width: 1280px) {
-	.logo-container {
-		--text-offset: clamp(150px, 12vw, 280px);
-	}
 }
 
 .logo-container.show-text .logo-text span:first-child {
