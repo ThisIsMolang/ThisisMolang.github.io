@@ -18,6 +18,7 @@ const DOCK_ICON_CENTER_Y = 40;
 const DOCK_SCALE = 0.22;
 const DOCK_SNAP_ON = 0.6;
 const DOCK_SNAP_OFF = 0.4;
+const LETTER_OFFSET_BASE_SIZE = 144;
 
 function clamp(value, min, max) {
 	return Math.min(Math.max(value, min), max);
@@ -131,6 +132,30 @@ if (logoContainer) {
 	let isDocked = false;
 	let scrollFramePending = false;
 
+	function getLetterOffsetScale() {
+		const firstLetter = letters[0];
+		if (!firstLetter) {
+			return 1;
+		}
+
+		const renderedLetterWidth = parseFloat(window.getComputedStyle(firstLetter).width);
+		if (!Number.isFinite(renderedLetterWidth) || renderedLetterWidth <= 0) {
+			return 1;
+		}
+
+		return renderedLetterWidth / LETTER_OFFSET_BASE_SIZE;
+	}
+
+	function updateLetterOffsets() {
+		const offsetScale = getLetterOffsetScale();
+
+		letters.forEach((letter) => {
+			const baseOffset = Number(letter.dataset.offset || 0);
+			const scaledOffset = Math.round(baseOffset * offsetScale);
+			letter.style.setProperty("--start-x", `${scaledOffset}px`);
+		});
+	}
+
 	function updateDockState() {
 		const progress = getDockProgress();
 		if (progress >= DOCK_SNAP_ON) {
@@ -164,12 +189,12 @@ if (logoContainer) {
 	}
 
 	letters.forEach((letter, index) => {
-		const offset = Number(letter.dataset.offset || 0);
 		const staggerMs = index * LETTER_STAGGER_MS;
-		letter.style.setProperty("--start-x", `${offset}px`);
 		letter.style.setProperty("--stagger-delay", `${staggerMs}ms`);
 		letter.style.setProperty("--transform-delay", "0ms");
 	});
+
+	updateLetterOffsets();
 
 	if (orbitalLayer) {
 		const debrisItems = createDebris(orbitalLayer);
@@ -180,7 +205,10 @@ if (logoContainer) {
 	}
 
 	window.addEventListener("scroll", requestDockUpdate, { passive: true });
-	window.addEventListener("resize", requestDockUpdate);
+	window.addEventListener("resize", () => {
+		updateLetterOffsets();
+		requestDockUpdate();
+	});
 	requestDockUpdate();
 
 	requestAnimationFrame(() => {
